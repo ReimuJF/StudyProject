@@ -1,0 +1,52 @@
+.container {
+    padding-top: 100px;
+    margin-left: 10%;
+    width: 80%;
+    text-align: center;
+    align-content: center;
+}
+
+.img-container {
+    overflow: hidden;
+    width: 300px;
+    height: 300px;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 50%;
+}
+
+#tree-image {
+    user-select: none;
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.1);
+
+}
+
+.bigger {
+    font-size: larger;
+}
+
+.pars p {
+    display: inline;
+    padding: 10px;
+}
+
+.btn {
+    background-color: black;
+    color: antiquewhite;
+    border: 3px solid gold;
+    border-radius: 5px;
+    width: 20%;
+    font-size: x-large;
+    cursor: pointer;
+    user-select: none;
+}
+
+.btn:hover:not([disabled]) {
+    background: linear-gradient(45deg, rgb(169, 164, 133), black);
+    transform: scale(1.1);
+
+}

@@ -1,0 +1,32 @@
+<form [formGroup]="noteForm" (ngSubmit)="addNote()" class="form" autocomplete="off">
+  <div>
+    <label class="label" for="input-title">Title
+      <input type="text" id="input-title" value="Title" formControlName="title" name="title" class="title-input">
+    </label>
+  </div>
+  @if (noteForm.valid) {
+  <div>
+    <textarea type="text" id="input-text" class="title-input input-text" rows="5" columns="40" maxlength="400"
+      spellcheck="false" formControlName="text" name="text"></textarea>
+  </div>
+  <input type="submit" class="btn" [disabled]="!noteForm.valid" value="Add Note" style="margin-left: 30%;">}
+</form>
+
+@if (!(notes.length === 0)) {
+<div class="container">
+  <ul class="notes">
+    <li *ngFor="let note of notes">
+      <button (click)="editNote(note.id)" class="li-button">
+        <span class="note-title">{{note.id}}&nbsp;{{note.title}}</span>
+        <span class="note-text">{{note.text}}</span>
+      </button>
+    </li>
+  </ul>
+</div>
+}
+
+<footer>
+  <div style="margin-left: 40px; margin-top: 20px;  padding-bottom: 40px;">
+    <button class="btn" (click)="back()">Back</button>
+  </div>
+</footer>

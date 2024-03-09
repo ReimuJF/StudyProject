@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="pars">
+    <h1>Hello from Angular! {{name}}!</h1>
+    <div class="img-container">
+      <img [src]="imageURL" alt="" id="tree-image">
+    </div> <br>
+    @for (el of loremArr; track $index) {
+    <p>{{el}}</p>
+    }
+    @empty {
+    <p> There are no items. </p>
+    }
+  </div>
+  @if (isBigger) {
+  <p id="p1" style="color:goldenrod;" [class.bigger]="isBigger">Ha Ha Ha Ha! 🤣</p>
+  }
+  @else {
+  <p id="p1" style="color:goldenrod;">Not Ha Ha 😢</p>
+  }
+  <div>
+    <button class="btn" (click)="test()">Click me</button>
+  </div>
+</div>
